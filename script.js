@@ -16,3 +16,27 @@ searchbnt.addEventListener('click', () => {
         input.focus();
     }
 });
+
+// Accordion Familia
+let secoaFamilia = document.querySelectorAll(".secao-familia");
+
+secoaFamilia.forEach(secao => {
+    secao.addEventListener("click", () => {
+        secao.classList.toggle("active");
+        let painel = secao.nextElementSibling;
+        painel.classList.toggle("active");
+    });
+});
+
+// MODAL FORMULÁRIO
+const btnAbrir = document.querySelector(".fale-gente");
+const overlay = document.querySelector(".contato-overlay");
+const btnFechar = document.querySelector(".fechar");
+
+btnAbrir.addEventListener("click", () => {
+    overlay.classList.add("active");
+});
+
+btnFechar.addEventListener("click", () => {
+    overlay.classList.remove("active");
+});
